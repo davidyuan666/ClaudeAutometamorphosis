@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP服务管理系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MCP服务管理系统</h1>
+            <p>管理和监控MCP服务状态</p>
+        </header>
+
+        <div class="controls">
+            <button id="refreshBtn" class="btn">刷新服务列表</button>
+            <button id="addServiceBtn" class="btn btn-primary">添加新服务</button>
+        </div>
+
+        <div id="servicesList" class="services-grid">
+            <!-- 服务卡片将通过JavaScript动态加载 -->
+        </div>
+
+        <!-- 添加服务模态框 -->
+        <div id="addServiceModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>添加新服务</h2>
+                <form id="addServiceForm">
+                    <input type="text" id="serviceName" placeholder="服务名称" required>
+                    <input type="text" id="serviceUrl" placeholder="服务URL" required>
+                    <input type="text" id="serviceDescription" placeholder="服务描述">
+                    <input type="text" id="serviceCategory" placeholder="服务分类">
+                    <button type="submit" class="btn btn-primary">添加</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
